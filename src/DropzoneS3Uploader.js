@@ -130,7 +130,7 @@ export default class DropzoneS3Uploader extends React.Component {
 
   render() {
     const state = this.state || {filename: this.props.filename}
-    const {className, style, multiple, accept} = this.props
+    const {className, activeClassName, style, multiple, accept} = this.props
     const {filename, filenames, progress, error} = state
     const s3Url = this.props.s3Url
     const fileUrl = filename ? `${s3Url}/${filename}` : null
@@ -141,6 +141,7 @@ export default class DropzoneS3Uploader extends React.Component {
 
     const dropzoneProps = {
       className,
+      activeClassName,
       style,
       multiple,
       accept,
