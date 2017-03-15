@@ -11,7 +11,7 @@ export default class DropzoneS3Uploader extends React.Component {
 
     contentDisposition: PropTypes.string,
     signingUrl: PropTypes.string,
-    signingUrlQueryParams: PropTypes.object,
+    signingUrlQueryParams: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     signingUrlHeaders: PropTypes.object,
     uploaderOptions: PropTypes.object,
     className: PropTypes.oneOfType([
